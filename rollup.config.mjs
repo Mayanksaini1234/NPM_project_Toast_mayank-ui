@@ -3,7 +3,7 @@ import commonjs from '@rollup/plugin-commonjs';
 import babel from '@rollup/plugin-babel';
 import postcss from 'rollup-plugin-postcss';
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
-import { terser } from 'rollup-plugin-terser';
+import terser  from '@rollup/plugin-terser';
 import path from 'path';
 
 export default {
@@ -22,8 +22,10 @@ export default {
   ],
   plugins: [
     peerDepsExternal(),
-    resolve(),
-    commonjs(),
+    resolve({
+      extensions: ['.js', '.jsx'], // 👈 Add this
+    }),
+        commonjs(),
     postcss({
       extensions: ['.css'],
       extract: path.resolve('dist/index.css'), // ✅ outputs CSS as a separate file
