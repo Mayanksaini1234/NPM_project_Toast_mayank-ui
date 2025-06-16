@@ -23,12 +23,12 @@ export default {
   plugins: [
     peerDepsExternal(),
     resolve({
-      extensions: ['.js', '.jsx'], // 👈 Add this
+      extensions: ['.js', '.jsx'], 
     }),
         commonjs(),
     postcss({
       extensions: ['.css'],
-      extract: path.resolve('dist/index.css'), // ✅ outputs CSS as a separate file
+      extract: path.resolve('dist/index.css'),
       minimize: true,
     }),
     babel({

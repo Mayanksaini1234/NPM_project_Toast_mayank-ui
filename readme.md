@@ -77,29 +77,6 @@ Copy and edit index.css from the package.
 
 Use your own custom classNames and styles in the toast renderer (advanced).
 
-## 🧪 Example with Vite
-
-```bash
-npm create vite@latest my-app -- --template react
-cd my-app
-npm install
-npm install mayank-ui
-```
-Update your main.jsx:
-
-```bash
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App.jsx';
-import 'mayank-ui/dist/index.css'; // ✅ Import toast styles
-import './index.css';
-
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
-```
 ## 🚀 Build Your Own
 This package is built with:
 
